@@ -4,7 +4,7 @@
     src: url('../font/JetBrainsMono-Regular.ttf') format('truetype');
     /* 可添加更多格式以提高兼容性 */
     font-weight: 400;
-    /* 匹配你在 CSS 中使用的字重 */
+    /* 匹配 CSS 中使用的字重 */
     font-style: normal;
     font-display: swap;
     /* 推荐：确保在加载时显示备用字体 */
@@ -13,6 +13,7 @@
 :root {
     --color-dark: #050505;
     --color-light: #f5f5f5;
+    --color-light-hover: rgba(255, 255, 255, 0.5);
     --font-sans: "Inter", sans-serif;
     --font-mono: "JetBrains Mono", monospace;
 }
@@ -36,7 +37,7 @@ body {
 }
 
 a {
-    color: inherit;
+    color: var(--color-light);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -49,12 +50,20 @@ section {
     justify-content: center;
 }
 
+.body-section {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
 h2 {
     font-size: clamp(2.5rem, 5vw, 5rem);
     font-weight: 700;
     letter-spacing: -2px;
 }
 
+p {
+    font-size: 1.5rem;
+}
 
 
 /* --- 导航栏 --- */
@@ -115,8 +124,8 @@ nav {
 }
 
 .nav-links a:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    color: #FFFFFF;
+    text-shadow: 0 0 10px var(--color-light-hover);
+    color: var(--color-light);
 }
 
 .menu-toggle {
@@ -152,7 +161,7 @@ nav {
     .nav-links {
         position: fixed;
         mix-blend-mode: normal;
-        top: 50px;
+        top: 64px;
         left: 0;
         width: 100%;
         height: calc(100vh - 50px);

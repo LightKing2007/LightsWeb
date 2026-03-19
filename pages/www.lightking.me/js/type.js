@@ -46,7 +46,7 @@ function setupTypewriter() {
         width: () => requiredWidth + "px",
         ease: "power1.inOut",
       },
-      ">"
+      ">",
     );
 
     // 4. 暂停

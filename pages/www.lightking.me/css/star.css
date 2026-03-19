@@ -10,13 +10,13 @@
     /* 让鼠标事件穿透星星，不影响点击下方内容 */
     z-index: -1;
     /* 确保在所有页面内容之下 */
-    background: #050505;
+    background: var(--color-dark);
     /* 或者您希望的背景颜色 */
 }
 
 .star {
     position: absolute;
-    background-color: #F5F5F5;
+    background-color: var(--color-light);
     /* 星星颜色 */
     border-radius: 50%;
     /* 圆形 */

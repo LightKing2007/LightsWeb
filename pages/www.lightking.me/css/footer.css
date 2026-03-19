@@ -32,7 +32,7 @@ footer img {
 
 .footer-links-group a:hover,
 .legal-info a:hover {
-    color: #FFFFFF;
+    color: var(--color-light);
     text-decoration: underline;
 }
 
