@@ -1,0 +1,7 @@
+# 服务器 47.108.181.240 上 Caddy 的主配置，安装到 /etc/caddy/Caddyfile。
+# 主配置只引入各站点的配置；各站点的配置由各自的仓库维护，安装到 /etc/caddy/sites/<站点>.caddy，
+# 例如弈（LightKing2007/yi）的 scripts/server/yi.caddy，由 npm run deploy -- install-caddy 安装。
+# 证书由 Caddy 自动向 Let's Encrypt 申请并续期；安全组须放行 80 与 443。
+# 未配置的域名或直接以 IP 访问时不返回任何站点。
+
+import /etc/caddy/sites/*.caddy
