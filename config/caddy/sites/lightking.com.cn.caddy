@@ -1,0 +1,3 @@
+lightking.com.cn {
+	redir https://www.lightking.com.cn{uri} 301
+}

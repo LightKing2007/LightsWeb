@@ -1,14 +1,7 @@
 {
   "name": "LightKing",
   "short_name": "LightKing",
-  "icons": [
-    {
-      "src": "/LightKing-App.png",
-      "sizes": "2000x2000",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ],
+  "icons": [{"src": "LightKing-App.png", "sizes": "2000x2000", "type": "image/png", "purpose": "maskable"}],
   "theme_color": "#000033",
   "background_color": "#000033",
   "display": "standalone"

@@ -1,23 +1,16 @@
-function goBack() {
-  window.history.back();
-}
-
-function goHome() {
-  window.location.href = "https://www.lightking.me";
-}
-
+function goBack() { window.history.back(); }
+function goHome() { window.location.href = "https://www.lightking.com.cn/"; }
 function contactSupport() {
-  // 在实际应用中替换为您的支持邮箱
-  const email = "LightWork7002@outlook.com";
-  const subject = "404 禁止访问问题";
+  const subject = "404 页面不存在问题";
   const body = "我在尝试访问页面时遇到了404错误, 页面URL是: " + window.location.href;
-  window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:LightWork7002@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
-
-// 添加键盘快捷键支持
-document.addEventListener("keydown", (e) => {
-  // 按ESC返回上一页
-  if (e.key === "Escape") goBack();
-  // 按H键访问首页
-  if (e.key === "h" || e.key === "H") goHome();
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("back")?.addEventListener("click", goBack);
+  document.getElementById("home")?.addEventListener("click", goHome);
+  document.getElementById("support")?.addEventListener("click", contactSupport);
+});
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") goBack();
+  if (event.key === "h" || event.key === "H") goHome();
 });

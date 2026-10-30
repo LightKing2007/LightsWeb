@@ -1,0 +1,7 @@
+tools.lightking.com.cn {
+	root * /opt/lightsweb/current/pages/tools.lightking.me
+	import security
+	redir /random /random/ 308
+	encode zstd gzip
+	file_server
+}
