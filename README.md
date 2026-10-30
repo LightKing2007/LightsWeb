@@ -1,25 +1,18 @@
 # LightsWeb
 
-LightKing 的独立静态网站仓库。与 `yi` 仓库、Node 服务及 `yi.caddy` 完全分离。
-
-## 站点
+LightsWeb 只是网站源代码仓库的名称，不对应服务器上的统一网站目录或进程。每个网站独立部署、独立配置：
 
 - `lightking.com.cn`：301 跳转到个人主页。
-- `www.lightking.com.cn`：个人主页、摄影作品及公共资源。
-- `tools.lightking.com.cn`：工具站与随机数工具。
+- `www.lightking.com.cn`：个人主页，部署到 `/opt/www/www.lightking.com.cn/`。
+- `tools.lightking.com.cn`：工具站，部署到 `/opt/www/tools.lightking.com.cn/`。
 
-每个域名在 `config/caddy/sites/` 中有独立配置。页面由 Caddy `file_server` 直接提供，证书由 Caddy 自动管理。
+各域名的 Caddy 配置位于 `config/caddy/sites/`，页面由 Caddy `file_server` 直接提供。`yi` 因其联机服务需要，继续使用自己的 Node 服务和 `/opt/yi/` 结构。
 
-## 发布
-
-```sh
-SERVER=user@example.com sh scripts/deploy.sh
-```
-
-发布只更新 `/opt/lightsweb/current`。首次配置或配置变化时：
+## 单独发布一个网站
 
 ```sh
-SERVER=user@example.com sh scripts/install-caddy.sh
+SERVER=root@lightking.com.cn sh scripts/deploy.sh www.lightking.com.cn
+SERVER=root@lightking.com.cn sh scripts/deploy.sh tools.lightking.com.cn
 ```
 
-部署前需确保 DNS 已指向服务器，且服务器安全组放行 80、443。
+首次配置或配置变化时使用 `scripts/install-caddy.sh`。DNS 需指向服务器，并放行 80、443。
