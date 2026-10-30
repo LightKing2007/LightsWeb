@@ -4,7 +4,7 @@
 		@forbidden expression `{http.error.status_code} == 403`
 		rewrite @not_found /404.html
 		rewrite @forbidden /403.html
-		root * /opt/lightsweb/current/pages/error
+		root * /opt/lightsweb/current/pages/www.lightking.me
 		file_server
 	}
 }
