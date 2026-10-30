@@ -1,0 +1,7 @@
+www.lightking.com.cn {
+	root * /opt/lightsweb/current/pages/www.lightking.me
+	import security
+	import site_errors
+	encode zstd gzip
+	file_server
+}

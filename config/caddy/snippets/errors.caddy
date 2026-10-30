@@ -1,0 +1,10 @@
+(site_errors) {
+	handle_errors {
+		@not_found expression `{http.error.status_code} == 404`
+		@forbidden expression `{http.error.status_code} == 403`
+		rewrite @not_found /404.html
+		rewrite @forbidden /403.html
+		root * /opt/lightsweb/current/pages/error
+		file_server
+	}
+}
