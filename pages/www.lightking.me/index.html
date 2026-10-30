@@ -6,144 +6,64 @@
     <meta name="description" content="LightKing的小宇宙 - 探索我的作品、技术项目和个人成长历程" />
     <meta name="keywords" content="个人网站, 作品集, 技术博客, 技能展示" />
     <meta name="author" content="LightKing" />
-
-    <!-- 引入GSAP库及TextPlugin -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-
-    <!-- 提供多种格式的网站图标 -->
     <link rel="icon" type="image/png" href="images/favicon/favicon-2kx2k.png" />
     <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
     <link rel="shortcut icon" href="images/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="2000x2000" href="images/favicon/LightKing-App.png" />
     <meta name="apple-mobile-web-app-title" content="LightKing" />
     <link rel="manifest" href="images/favicon/site.webmanifest" />
-
-    <!-- 链接样式表 -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/star.css" />
     <link rel="stylesheet" type="text/css" href="css/type.css" />
     <link rel="stylesheet" type="text/css" href="css/gallery.css" />
     <link rel="stylesheet" type="text/css" href="css/footer.css" />
-
     <title>LightKing的小宇宙</title>
   </head>
-
   <body>
     <div class="stars" id="stars-container"></div>
-
     <nav id="navbar">
       <div class="logo" data-hover><img src="images/favicon/favicon.svg" alt="LightKing Logo" />LIGHTKING.</div>
       <div class="nav-links" id="nav-links">
-        <a href="#Home" data-hover>Home</a>
-        <a href="#about" data-hover>About</a>
-        <a href="#projects" data-hover>Projects</a>
-        <a href="#blog" data-hover>Blog</a>
-        <a href="#gallery" data-hover>Photography</a>
-        <a href="#contact" data-hover>Contact</a>
+        <a href="#Home" data-hover>Home</a><a href="#about" data-hover>About</a>
+        <a href="#projects" data-hover>Projects</a><a href="#blog" data-hover>Blog</a>
+        <a href="#gallery" data-hover>Photography</a><a href="#contact" data-hover>Contact</a>
       </div>
-
       <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
       </button>
     </nav>
-
     <section id="Home" class="type-body">
-      <div class="typing-text-wrap">
-        <div class="typing-line">
-          <h1 class="typing-text-container" id="text-container">
-            <span class="typing-text" id="welcome-text"></span>
-          </h1>
-          <span class="cursor" id="cursor"></span>
-        </div>
-
-        <p class="subtitle" id="subtitle">/* Computer Science Student & Developer */</p>
-      </div>
+      <div class="typing-text-wrap"><div class="typing-line">
+        <h1 class="typing-text-container" id="text-container"><span class="typing-text" id="welcome-text"></span></h1>
+        <span class="cursor" id="cursor"></span>
+      </div><p class="subtitle" id="subtitle">/* Computer Science Student &amp; Developer */</p></div>
       <div class="scroll-indicator">SCROLL</div>
     </section>
-
     <section class="body-section" id="about">
-      <h2>关于我</h2>
-      <p>你好，我是LightKing，一名计算机科学学生和开发者。我热爱编程、技术和摄影，喜欢探索新事物。</p>
+      <h2>关于我</h2><p>你好，我是LightKing，一名计算机科学学生和开发者。我热爱编程、技术和摄影，喜欢探索新事物。</p>
       <p>在这里，你可以了解我的技能、项目以及我对技术的热情。</p>
-      <div class="skills">
-        <span class="skill">JavaScript</span>
-        <span class="skill">Python</span>
-        <span class="skill">Web Development</span>
-        <span class="skill">Photography</span>
+      <div class="skills"><span class="skill">JavaScript</span><span class="skill">Python</span><span class="skill">Web Development</span><span class="skill">Photography</span></div>
+    </section>
+    <section class="body-section" id="projects"><h2>项目展示</h2><p>探索我参与的各种技术项目和作品集。</p></section>
+    <section class="body-section" id="blog"><h2>技术博客</h2><p>阅读我分享的技术文章和编程心得。</p></section>
+    <section id="gallery"><h2>My Photography Log</h2><div class="gallery-wrapper">
+      <div class="gallery-row gallery-track-1">
+        <div class="gallery-item"><img src="images/photo/photo1.JPG" alt="Photo 1" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo2.JPG" alt="Photo 2" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo3.JPG" alt="Photo 3" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo4.JPG" alt="Photo 4" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo5.JPG" alt="Photo 5" loading="lazy" /></div>
+        <div class="gallery-item"><img src="images/photo/photo1.JPG" alt="" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo2.JPG" alt="" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo3.JPG" alt="" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo4.JPG" alt="" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo5.JPG" alt="" loading="lazy" /></div>
       </div>
-    </section>
-
-    <section class="body-section" id="projects">
-      <h2>项目展示</h2>
-      <p>探索我参与的各种技术项目和作品集。</p>
-    </section>
-
-    <section class="body-section" id="blog">
-      <h2>技术博客</h2>
-      <p>阅读我分享的技术文章和编程心得。</p>
-    </section>
-
-    <section id="gallery">
-      <h2>My Photography Log</h2>
-
-      <div class="gallery-wrapper">
-        <div class="gallery-row gallery-track-1">
-          <div class="gallery-item"><img src="images/photo/photo1.JPG" alt="Photo 1" /></div>
-          <div class="gallery-item"><img src="images/photo/photo2.JPG" alt="Photo 2" /></div>
-          <div class="gallery-item"><img src="images/photo/photo3.JPG" alt="Photo 3" /></div>
-          <div class="gallery-item"><img src="images/photo/photo4.JPG" alt="Photo 4" /></div>
-          <div class="gallery-item"><img src="images/photo/photo5.JPG" alt="Photo 5" /></div>
-
-          <div class="gallery-item"><img src="images/photo/photo1.JPG" alt="Photo 1" /></div>
-          <div class="gallery-item"><img src="images/photo/photo2.JPG" alt="Photo 2" /></div>
-          <div class="gallery-item"><img src="images/photo/photo3.JPG" alt="Photo 3" /></div>
-          <div class="gallery-item"><img src="images/photo/photo4.JPG" alt="Photo 4" /></div>
-          <div class="gallery-item"><img src="images/photo/photo5.JPG" alt="Photo 5" /></div>
-        </div>
-
-        <div class="gallery-row gallery-track-2">
-          <div class="gallery-item"><img src="images/photo/photo6.JPG" alt="Photo 6" /></div>
-          <div class="gallery-item"><img src="images/photo/photo7.JPG" alt="Photo 7" /></div>
-          <div class="gallery-item"><img src="images/photo/photo8.JPG" alt="Photo 8" /></div>
-          <div class="gallery-item"><img src="images/photo/photo9.JPG" alt="Photo 9" /></div>
-          <div class="gallery-item"><img src="images/photo/photo10.JPG" alt="Photo 10" /></div>
-
-          <div class="gallery-item"><img src="images/photo/photo6.JPG" alt="Photo 6" /></div>
-          <div class="gallery-item"><img src="images/photo/photo7.JPG" alt="Photo 7" /></div>
-          <div class="gallery-item"><img src="images/photo/photo8.JPG" alt="Photo 8" /></div>
-          <div class="gallery-item"><img src="images/photo/photo9.JPG" alt="Photo 9" /></div>
-          <div class="gallery-item"><img src="images/photo/photo10.JPG" alt="Photo 10" /></div>
-        </div>
+      <div class="gallery-row gallery-track-2">
+        <div class="gallery-item"><img src="images/photo/photo6.JPG" alt="Photo 6" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo7.JPG" alt="Photo 7" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo8.JPG" alt="Photo 8" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo9.JPG" alt="Photo 9" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo10.JPG" alt="Photo 10" loading="lazy" /></div>
+        <div class="gallery-item"><img src="images/photo/photo6.JPG" alt="" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo7.JPG" alt="" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo8.JPG" alt="" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo9.JPG" alt="" loading="lazy" /></div><div class="gallery-item"><img src="images/photo/photo10.JPG" alt="" loading="lazy" /></div>
       </div>
-    </section>
-
-    <section class="body-section" id="contact">
-      <h2>Contact Me</h2>
-      <p>If you have any questions or collaboration ideas, feel free to reach out to me through the following methods.</p>
-    </section>
-
+    </div></section>
+    <section class="body-section" id="contact"><h2>Contact Me</h2><p>If you have any questions or collaboration ideas, feel free to reach out to me through the following methods.</p></section>
     <footer>
-      <div class="footer-links-group">
-        <span class="footer-label">友情链接:</span>
-        <a href="#" target="_blank">虚以待位</a>
-        <a href="#" target="_blank">虚以待位</a>
-        <a href="#" target="_blank">虚以待位</a>
-      </div>
-
-      <div class="legal-info">
-        <span>Copyright ©️ 2025-2026 LightKing. All Rights Reserved.</span>
-        <a href="https://beian.miit.gov.cn/" target="_blank"><img src="images/icon/ICP.png" />渝ICP备2025066996号-1</a>
-        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002504889" target="_blank"><img src="images/icon/MPS.png" />渝公网安备50019002504889号</a>
+      <div class="footer-links-group"><span class="footer-label">友情链接:</span><a href="#" target="_blank">虚以待位</a><a href="#" target="_blank">虚以待位</a><a href="#" target="_blank">虚以待位</a></div>
+      <div class="legal-info"><span>Copyright ©️ 2025-2026 LightKing. All Rights Reserved.</span>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer"><img src="images/icon/ICP.png" alt="" />渝ICP备2025066996号-1</a>
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002504889" target="_blank" rel="noopener noreferrer"><img src="images/icon/MPS.png" alt="" />渝公网安备50019002504889号</a>
       </div>
     </footer>
-
-    <!-- 脚本 -->
-    <script src="js/nav.js"></script>
-    <script src="js/star.js"></script>
-    <script src="js/type.js"></script>
-    <script src="js/gallery.js"></script>
+    <script src="js/nav.js"></script><script src="js/star.js"></script><script src="js/type.js"></script><script src="js/gallery.js"></script>
   </body>
 </html>
